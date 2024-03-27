@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const connectToDB = async () => {
     try {
         if (mongoose.connection?.readyState) {
-            console.log("ONNNN")
+
             return {
                 status: 200,
                 message: "Connection is ready",
@@ -11,7 +11,7 @@ const connectToDB = async () => {
             }
         }
         await mongoose.connect("mongodb://localhost:27017/academy");
-        console.log("OJJJJ")
+
         return {
             status: 200,
             message: "Connect To Db Successfully",
